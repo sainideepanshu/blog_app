@@ -6,6 +6,7 @@ Future<File?> pickImage() async {
   try {
     final xFile = await ImagePicker().pickImage(
       source: ImageSource.gallery,
+      //We can use image quality parameter to compress the image also
     );
     if (xFile != null) {
       return File(xFile.path);
