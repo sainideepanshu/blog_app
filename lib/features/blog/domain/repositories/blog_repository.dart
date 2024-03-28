@@ -13,4 +13,6 @@ abstract interface class BlogRepository {
     required String posterId, // posterId is the user who posted it
     required List<String> topics,
   });
+
+  Future<Either<Failure, List<Blog>>> getAllBlogs();
 }
